@@ -8,10 +8,10 @@ function getImageUrl(name) {
 function ImageCard (image) {
     return(
         <>
-            <div className=" aspect-1/1 object-fill bg-slate600 w-4/5">
-                <img src={getImageUrl(image.image)} className="object-cover w-full h-full hover:blur-sm cursor-pointer relative duration-300"/>
-                <div className="h-20 w-full">
-                    <text className="top-1/2 w-full text-center">swag</text>
+            <div className="group relative aspect-1/1 object-fill bg-slate600 w-4/5 cursor-pointer">
+                <img src={getImageUrl(image.image)} className="group-hover:blur-sm block object-cover w-full h-full"/>
+                <div style={{backgroundColor: "#8080804f"}}className="absolute inset-0  opacity-0 group-hover:opacity-100 flex justify-center items-center duration-300">
+                    <text className="text-5xl text-black">swag</text>
                 </div>
             </div>
         </>
