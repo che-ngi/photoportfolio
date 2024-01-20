@@ -5,19 +5,19 @@
 
 const IMAGES = [
     {
-        "title": "Landscape",
+        "title": "landscapes",
         "photo" : 'DSC04040-Edit',
     },
     {
-        "title": "Event",
+        "title": "events",
         "photo" : 'DSC01064-45',
     },
     {
-        "title": "Concert",
+        "title": "concerts",
         "photo" : 'DSC07312-Edit',
     },
     {
-        "title": "Portrait",
+        "title": "portraits",
         "photo" : 'DSC04316',
     },
 ]

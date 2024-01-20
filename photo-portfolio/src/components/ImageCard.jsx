@@ -10,9 +10,9 @@ function ImageCard (image) {
         <>
             <div className="group relative aspect-1/1 object-fill bg-slate600 w-4/5 cursor-pointer">
                 <img src={getImageUrl(image.image)} className="group-hover:blur-sm block object-cover w-full h-full"/>
-                <div style={{backgroundColor: "#8080804f"}}className="absolute inset-0  opacity-0 group-hover:opacity-100 flex justify-center items-center duration-300">
-                    <text className="text-5xl text-black">swag</text>
+                <div style={{backgroundColor: "#c7c7c74f"}}className="absolute inset-0  opacity-0 group-hover:opacity-100 flex justify-center items-center duration-300">
                 </div>
+                <text className="absolute font-sans font-thin tracking-wider pt-3 duration-500 md:text-2xl lg:text-3xl xl:text-5xl text-gray-800 text-center content-start justify-center w-full">{image.title}</text>
             </div>
         </>
     )
