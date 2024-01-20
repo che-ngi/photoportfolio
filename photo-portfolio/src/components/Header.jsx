@@ -5,12 +5,15 @@ import LinkedInLogo from '../img/linkedin.svg?react';
 function Header() {
     return (
     <>
-      <header className="overscroll-y-none w-72 min-w-72 h-screen p-12 content-center text-left">
+      <header className="overscroll-y-none w-72 min-w-72 h-screen p-12 content-center text-left text-gray-800">
         <nav className='fixed overscroll-y-none'>
-          <h1 className='font-sans text-4xl tracking-tighter'>
+          <h1 className='font-sans text-4xl tracking-tighter align-text-top -mt-1'>
             aaron cheng
           </h1>
-          <ul className='flex flex-col mt-20 text-lg font-sans tracking-wider gap-6 text-gray-800'>
+          <h2 className="text-md font-thin text-gray-500">
+            photography
+          </h2>
+          <ul className='flex flex-col mt-20 text-lg font-sans tracking-wider gap-6'>
             <li>
               work
             </li>
