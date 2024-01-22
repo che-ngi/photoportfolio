@@ -10,6 +10,9 @@ export default {
         '4/5': '4 / 5',
         '3/2': '3 / 2'
       },
+      height: {
+        '80vh' : '80vh'
+      }
     },
     fontFamily: {
       'sans': ['Helvetica', 'Arial', 'sans-serif'],
