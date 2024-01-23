@@ -12,6 +12,15 @@ export default {
       },
       height: {
         '80vh' : '80vh'
+      },
+      keyframes: {
+        fadein: {
+          '0%': { opacity: '0'},
+          '100%': { opacity: '1'}
+        }
+      }, 
+      animation: {
+        fadein: 'fadein 1s ease'
       }
     },
     fontFamily: {

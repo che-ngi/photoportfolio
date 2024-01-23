@@ -1,7 +1,7 @@
 // import IMAGES from "../assets/data/homepics.jsx"
 import { useState, useEffect } from "react";
-import { FaChevronLeft } from "react-icons/fa";
-import { FaChevronRight } from "react-icons/fa";
+import { HiOutlineChevronLeft } from "react-icons/hi";
+import { HiOutlineChevronRight } from "react-icons/hi";
 
 function ImageSlider () {
 
@@ -42,11 +42,14 @@ function ImageSlider () {
             title: "bean"
         },
         {
-            title: "LASkyline"
+            title: "ricepaddyheroes2"
         },
         {
-            title: "dhadak"
+            title: 'jabin'
         }, 
+        {
+            title: 'dhadak'
+        },
         {
             title: "hojean"
         }, 
@@ -54,7 +57,7 @@ function ImageSlider () {
             title: "hongkong2"
         },
         {
-            title: "nycpark"
+            title: "gabiandfriends"
         },
         {
             title: "ricepaddyheroes"
@@ -63,22 +66,25 @@ function ImageSlider () {
             title: "hongkong"
         }, 
         {
-            title: "ricepaddyheroes2"
+            title: "LASkyline"
         },
         {
             title: "tifday"
+        },
+        {
+            title: "hongdaenight"
         }
     ]
 
     return(
             <main className="py-12 w-full h-screen ">
-                <div className="py-8 flex flex-col image-container max-w-[1400px] h-full w-full m-auto px-4 relative justify-center">
-                    <img src={getImageUrl(slides[currentIndex].title)} className="flex max-h-full w-full object-contain justify-self-start duration-500"/>
-                    <div className="absolute top-[47%] -translate-x-0 translate-y-[-47%] left-6 text-l md:text-3xl rounded-full p-2 bg-white/50 text-black cursor-pointer duration-500">
-                        <FaChevronLeft onClick={prevSlide}/>
+                <div className="py-8 flex flex-col image-container max-w-[1400px] h-full w-full m-auto px-4 relative justify-center animate-fadein">
+                    <img src={getImageUrl(slides[currentIndex].title)} className="flex max-h-full max-w-full object-contain justify-self-start"/>
+                    <div className="absolute top-[47%] -translate-x-0 translate-y-[-47%] left-5 text-l md:text-3xl rounded-full p-1 bg-white/50 text-black hover:bg-black/50 hover:text-white cursor-pointer duration-300">
+                        <HiOutlineChevronLeft onClick={prevSlide}/>
                     </div>
-                    <div className="absolute top-[47%] -translate-x-0 translate-y-[-47%] right-6 text-l md:text-3xl rounded-full p-2 bg-white/50 text-black cursor-pointer duration-500">
-                        <FaChevronRight onClick={nextSlide} />
+                    <div className="absolute top-[47%]  -translate-x-0 translate-y-[-47%] right-5 text-l md:text-3xl rounded-full p-1 bg-white/50 text-black hover:bg-black/50 hover:text-white cursor-pointer duration-300">
+                        <HiOutlineChevronRight onClick={nextSlide} />
                     </div>
                     <h1 className="duration-500 text-center text-2xl md:text-4xl pt-4 xl:text-5xl font-sans font-thin tracking-wider">recent</h1> 
 

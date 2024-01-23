@@ -21,10 +21,10 @@ function Header() {
                 <Link to="/work" className="hover:text-gray-500 hover:scale-110 duration-300 inline-block">work</Link>
             </li>
             <li>
-                <Link to="/about">about</Link>
+                <Link to="/about" className="hover:text-gray-500 hover:scale-110 duration-300 inline-block">about</Link>
             </li>
             <li>
-                <Link to="/contact">contact</Link>
+                <Link to="/contact" className="hover:text-gray-500 hover:scale-110 duration-300 inline-block">contact</Link>
             </li>
           </ul>
           {/* socials */}
