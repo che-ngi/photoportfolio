@@ -71,17 +71,16 @@ function ImageSlider () {
     ]
 
     return(
-            <main className="py-12 w-full">
-                <div className="image-container max-w-[1400px] h-[95%] w-full m-auto px-4 relative">
-                    <div style={{ backgroundImage: `url(${getImageUrl(slides[currentIndex].title)})`}} className="w-full h-full bg-center bg-contain bg-no-repeat duration-500"> 
-                    </div>
-                    <div className="absolute top-[50%] -translate-x-0 translate-y-[-50%] left-6 text-l md:text-3xl rounded-full p-2 bg-white/50 text-black cursor-pointer duration-500">
+            <main className="py-12 w-full h-screen ">
+                <div className="py-8 flex flex-col image-container max-w-[1400px] h-full w-full m-auto px-4 relative justify-center">
+                    <img src={getImageUrl(slides[currentIndex].title)} className="flex max-h-full w-full object-contain justify-self-start duration-500"/>
+                    <div className="absolute top-[47%] -translate-x-0 translate-y-[-47%] left-6 text-l md:text-3xl rounded-full p-2 bg-white/50 text-black cursor-pointer duration-500">
                         <FaChevronLeft onClick={prevSlide}/>
                     </div>
-                    <div className="absolute top-[50%] -translate-x-0 translate-y-[-50%] right-6 text-l md:text-3xl rounded-full p-2 bg-white/50 text-black cursor-pointer duration-500">
+                    <div className="absolute top-[47%] -translate-x-0 translate-y-[-47%] right-6 text-l md:text-3xl rounded-full p-2 bg-white/50 text-black cursor-pointer duration-500">
                         <FaChevronRight onClick={nextSlide} />
                     </div>
-                    <h1 className="w-full text-center text-5xl mt-4 font-sans font-thin tracking-wider">recent work</h1>
+                    <h1 className="duration-500 text-center text-2xl md:text-4xl pt-4 xl:text-5xl font-sans font-thin tracking-wider">recent</h1> 
 
 
                 </div>
