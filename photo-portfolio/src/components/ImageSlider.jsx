@@ -10,6 +10,7 @@ function ImageSlider () {
       }
     
     const [currentIndex, setCurrentIndex] = useState(0);
+    let [id, setId] = useState();
     
     const prevSlide = () => {
         const isFirstSlide = currentIndex === 0;
@@ -18,15 +19,15 @@ function ImageSlider () {
     };
     
     
-    const nextSlide = () => {
+    const nextSlide = () => {   
         const isLastSlide = currentIndex === slides.length - 1;
         const newIndex = isLastSlide ? 0 : currentIndex + 1;
         setCurrentIndex(newIndex);
 
     };
-
     useEffect(() => {
-        const id = setInterval(() => { nextSlide()}, 3000);
+        // clearInterval(id);
+        setId(setInterval(() => { nextSlide()}, 5000));
     
         return () => {
           clearInterval(id);
@@ -36,43 +37,43 @@ function ImageSlider () {
 
     const slides = [
         {
-            title: "highvyn"
+            title: "highvyn-min"
         },
         {
-            title: "bean"
+            title: "bean-min"
         },
         {
-            title: "ricepaddyheroes2"
+            title: "ricepaddyheroes2-min"
         },
         {
-            title: 'jabin'
+            title: 'jabin-min'
         }, 
         {
-            title: 'dhadak'
+            title: 'dhadak-min'
         },
         {
-            title: "hojean"
+            title: "hojean-min"
         }, 
         {
-            title: "hongkong2"
+            title: "hongkong2-min"
         },
         {
-            title: "gabiandfriends"
+            title: "gabiandfriends-min"
         },
         {
-            title: "ricepaddyheroes"
+            title: "ricepaddyheroes-min"
         },
         {
-            title: "hongkong"
+            title: "hongkong-min"
         }, 
         {
-            title: "LASkyline"
+            title: "LASkyline-min"
         },
         {
-            title: "tifday"
+            title: "tifday-min"
         },
         {
-            title: "hongdaenight"
+            title: "hongdaenight-min"
         }
     ]
 

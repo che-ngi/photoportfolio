@@ -4,6 +4,9 @@ import About from "./pages/About.jsx"
 import Contact from "./pages/Contact.jsx"
 import Portraits from "./pages/Portraits.jsx"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Landscapes from "./pages/Landscapes.jsx"
+import Events from "./pages/Events.jsx"
+import Concerts from "./pages/Concerts.jsx"
 
 function App() {
 
@@ -15,6 +18,9 @@ function App() {
           <Route path="/about" element={<About/>}/>
           <Route path="/contact" element={<Contact/>}/>
           <Route path="/portraits" element={<Portraits/>}/>
+          <Route path="/landscapes" element={<Landscapes/>}/>
+          <Route path="/concerts" element={<Concerts/>}/>
+          <Route path="/events" element={<Events/>}/>
         </Routes>
     </BrowserRouter>
 

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Header() {
     return (
     <>
-      <header className="overscroll-y-none w-72 min-w-72 h-screen p-12 content-center text-left text-gray-800">
+      <header className="hidden sm:inline overscroll-y-none w-72 min-w-72 h-screen p-12 content-center text-left text-gray-800">
         <nav className='fixed overscroll-y-none'>
         <Link to="/">
             <h1 className='font-sans text-4xl tracking-tighter align-text-top -mt-1'>
@@ -18,13 +18,13 @@ function Header() {
         </Link>
           <ul className='flex flex-col mt-20 text-lg font-sans tracking-wider gap-6'>
             <li>
-                <Link to="/work" className="hover:text-gray-500 hover:scale-110 duration-300 inline-block">work</Link>
+                <Link to="/work" className="hover:text-gray-500 hover:scale-110 duration-300 inline-block">work.</Link>
             </li>
             <li>
-                <Link to="/about" className="hover:text-gray-500 hover:scale-110 duration-300 inline-block">about</Link>
+                <Link to="/about" className="hover:text-gray-500 hover:scale-110 duration-300 inline-block">about.</Link>
             </li>
             <li>
-                <Link to="/contact" className="hover:text-gray-500 hover:scale-110 duration-300 inline-block">contact</Link>
+                <Link to="/contact" className="hover:text-gray-500 hover:scale-110 duration-300 inline-block">contact.</Link>
             </li>
           </ul>
           {/* socials */}
@@ -38,6 +38,7 @@ function Header() {
           </ul>
         </nav>
       </header>
+
     </>
     )
 }

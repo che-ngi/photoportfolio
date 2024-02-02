@@ -6,19 +6,19 @@
 const IMAGES = [
     {
         "title": "landscapes",
-        "photo" : 'ddp',
+        "photo" : 'ddp-min',
     },
     {
         "title": "portraits",
-        "photo" : 'ivyportrait',
+        "photo" : 'ivyportrait-min',
     },
     {
         "title": "concerts",
-        "photo" : 'mico',
+        "photo" : 'mico-min',
     },
     {
         "title": "events",
-        "photo" : 'altitude',
+        "photo" : 'altitude-min',
     },
 ]
 

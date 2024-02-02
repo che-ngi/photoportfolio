@@ -1,27 +1,39 @@
 // import IMAGES from "../assets/data/homepics.jsx"
-function getImageUrl(name) {
-    return new URL(`../img/recentwork/${name}.jpg`, import.meta.url).href
-  }
+import PORTRAITS from "../assets/data/portraits.jsx"
+import LANDSCAPES from "../assets/data/landscapes.jsx"
+import CONCERTS from "../assets/data/concerts.jsx"
+import EVENTS from "../assets/data/events.jsx"
 
-function MasonryGrid () {
+
+// function getImageUrlPortraits(name) {
+//     return new URL(`../img/portraits/${name}.jpg`, import.meta.url).href
+//   }
+// function getImageUrlLandscapes(name) {
+// return new URL(`../img/landscapes/${name}.jpg`, import.meta.url).href
+// }
+
+function getImageUrl(genre, name) {
+return new URL(`../img/${genre}/${name}.jpg`, import.meta.url).href
+}
+
+function MasonryGrid (props) {
     return(
-            <main className="py-12">
-
-                <h1 className="text-center text-4xl mb-4 font-sans font-thin tracking-wider">recent work</h1>
-
-                <div className="image-container m-10 columns-3 gap-5">
-                    <img className="mb-5" src={getImageUrl("highvyn")}></img>
-                    <img className="mb-5" src={getImageUrl("bean")}></img>
-                    <img className="mb-5" src={getImageUrl("LASkyline")}></img>
-                    <img className="mb-5" src={getImageUrl("dhadak")}></img>
-                    <img className="mb-5" src={getImageUrl("hojean")}></img>
-                    <img className="mb-5" src={getImageUrl("hongkong2")}></img>
-                    <img className="mb-5" src={getImageUrl("jabin")}></img>
-                    <img className="mb-5" src={getImageUrl("nycpark")}></img>
-                    <img className="mb-5" src={getImageUrl("ricepaddyheroes")}></img>
-                    <img className="mb-5" src={getImageUrl("hongkong")}></img>
-                    <img className="mb-5" src={getImageUrl("ricepaddyheroes2")}></img>
-                    <img className="mb-5" src={getImageUrl("tifday")}></img>
+            <main className="p-12">
+                <h1 className="font-sans font-thin tracking-wider duration-500 text-2xl md:text-4xl xl:text-5xl text-gray-800 text-center content-start justify-center">{props.title}</h1>
+                <div className="mt-6 image-container columns-3 gap-8">
+                    {props.title == "portraits" && PORTRAITS && PORTRAITS.map((item) =>   
+                        <img key={item} className="mb-8" src={getImageUrl("portraits", item)}/>
+                    )}
+                    {props.title == "landscapes" && LANDSCAPES && LANDSCAPES.map((item) =>  
+                        <img key={item} className="mb-8" src={getImageUrl("landscapes", item)}/>
+                    )}
+                    
+                    {props.title == "concerts" && CONCERTS && CONCERTS.map((item) =>  
+                        <img key={item} className="mb-8" src={getImageUrl("concerts", item)}/>
+                    )}
+                    {props.title == "events" && EVENTS && EVENTS.map((item) =>  
+                        <img key={item} className="mb-8" src={getImageUrl("events", item)}/>
+                    )}
                 </div>
             </main>
     )
