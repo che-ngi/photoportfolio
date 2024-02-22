@@ -1,5 +1,5 @@
 import Header from '../components/Header.jsx';
-import ImageSlider from '../components/ImageSlider.jsx';
+import ImageGrid from '../components/ImageGrid.jsx';
 import Hamburger from '../img/hamburger.svg?react';
 import InstagramLogo from '../img/instagram.svg?react';
 import LinkedInLogo from '../img/linkedin.svg?react';
@@ -7,10 +7,11 @@ import Cross from '../img/cross.svg?react';
 import { Link } from "react-router-dom";
 import {useState} from 'react';
 
-function Home() {
- 
-    const [menuOpen, setMenuOpen] = useState(false);
 
+function Portfolio() {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+  
   return (
     <div className="App flex flex-col sm:flex-row">
       <Header/>
@@ -27,16 +28,15 @@ function Home() {
                 {!menuOpen && <Hamburger onClick={() => setMenuOpen(true)}/>}
             </button>
         </header>
-      <ImageSlider/>
-
+      <ImageGrid/>
       {menuOpen &&         
         <div className="fixed h-full w-screen sm:hidden backdrop-blur-sm top-0 left-0">
             <header className="absolute  bg-white/80 h-screen w-full">
                 <button className="absolute right-6 top-8 h-12 w-12">
                     <Cross className="fill-black" onClick={() => setMenuOpen(false)}/>
                 </button>
-                <div className="flex h-screen justify-center items-center">
-                <ul className='flex flex-col items-center text-5xl font-sans tracking-wider text-center gap-10 align-center text-black'>
+                <div className="flex h-full justify-center items-center">
+                <ul className='flex flex-col text-5xl font-sans items-center tracking-wider gap-10 text-center align-center text-black'>
                     <li>
                         <Link to="/portfolio" className="hover:text-gray-500 hover:scale-110 duration-300">portfolio.</Link>
                     </li>
@@ -63,4 +63,4 @@ function Home() {
   )
 }
 
-export default Home;
+export default Portfolio;

@@ -1,6 +1,8 @@
 import Header from '../components/Header.jsx';
 import MasonryGrid from '../components/MasonryGrid.jsx';
 import Hamburger from '../img/hamburger.svg?react';
+import InstagramLogo from '../img/instagram.svg?react';
+import LinkedInLogo from '../img/linkedin.svg?react';
 import Cross from '../img/cross.svg?react';
 import { Link } from "react-router-dom";
 import {useState} from 'react';
@@ -32,16 +34,24 @@ function Landscapes() {
                 <button className="absolute right-6 top-8 h-12 w-12">
                     <Cross className="fill-black" onClick={() => setMenuOpen(false)}/>
                 </button>
-                <div className="flex h-full border justify-center items-center">
-                <ul className='flex flex-col text-6xl font-sans tracking-wider gap-20 text-center align-center text-black'>
+                <div className="flex h-full justify-center items-center">
+                <ul className='flex flex-col text-5xl font-sans items-center tracking-wider gap-10 text-center align-center text-black'>
                     <li>
-                        <Link to="/work" className="hover:text-gray-500 hover:scale-110 duration-300">work.</Link>
+                        <Link to="/portfolio" className="hover:text-gray-500 hover:scale-110 duration-300">portfolio.</Link>
                     </li>
                     <li>
                         <Link to="/about" className="hover:text-gray-500 hover:scale-110 duration-300 ">about.</Link>
                     </li>
                     <li>
                         <Link to="/contact" className="hover:text-gray-500 hover:scale-110 duration-300">contact.</Link>
+                    </li>
+                    <li className="flex gap-6">
+                        <div className='h-8 w-8 hover:scale-110 duration-300'>
+                            <InstagramLogo className="cursor-pointer hover:fill-gray-400" onClick={() => window.open('https://www.instagram.com/che.ngi/', '_blank')}/>
+                        </div>
+                        <div className='h-8 w-8 hover:scale-110 duration-300'>
+                            <LinkedInLogo className="cursor-pointer hover:fill-gray-400" onClick={() => window.open('https://www.linkedin.com/in/che-ngi', '_blank')} />
+                        </div>
                     </li>
             </ul>
             </div>

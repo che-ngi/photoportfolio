@@ -87,7 +87,7 @@ function ImageSlider () {
                     <div className="absolute top-[47%]  -translate-x-0 translate-y-[-47%] right-5 text-l md:text-3xl rounded-full p-1 bg-white/50 text-black hover:bg-black/50 hover:text-white cursor-pointer duration-300">
                         <HiOutlineChevronRight onClick={nextSlide} />
                     </div>
-                    <h1 className="duration-500 text-center text-2xl md:text-4xl pt-4 xl:text-5xl font-sans font-thin tracking-wider">recent</h1> 
+                    <h1 className="duration-500 text-center text-4xl pt-4 xl:text-5xl font-sans font-thin tracking-wider">recent</h1> 
 
 
                 </div>

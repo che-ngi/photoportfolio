@@ -18,7 +18,7 @@ function Header() {
         </Link>
           <ul className='flex flex-col mt-20 text-lg font-sans tracking-wider gap-6'>
             <li>
-                <Link to="/work" className="hover:text-gray-500 hover:scale-110 duration-300 inline-block">work.</Link>
+                <Link to="/portfolio" className="hover:text-gray-500 hover:scale-110 duration-300 inline-block">portfolio.</Link>
             </li>
             <li>
                 <Link to="/about" className="hover:text-gray-500 hover:scale-110 duration-300 inline-block">about.</Link>

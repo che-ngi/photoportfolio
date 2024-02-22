@@ -3,6 +3,8 @@ import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Link } from "react-router-dom";
 import Hamburger from '../img/hamburger.svg?react';
+import InstagramLogo from '../img/instagram.svg?react';
+import LinkedInLogo from '../img/linkedin.svg?react';
 import Cross from '../img/cross.svg?react';
 
 function Contact() {
@@ -45,7 +47,7 @@ function Contact() {
         <div className="mt-12 grid lg:grid-cols-2">
         <div className="flex flex-col font-sans text-2xl gap-6 font-light">
                 <h2>have a creative idea? got an event coming up? looking to collaborate?</h2>
-                <h2 className="text-4xl mb-12 lg:mb-0"><b>let's shoot.</b></h2>
+                <h2 className="text-4xl mb-12 lg:mb-0"><b>let&apos;s shoot.</b></h2>
             </div>
             <form className="flex flex-col gap-6"  ref={form} onSubmit={sendEmail}>
                 <div className="flex flex-col">
@@ -71,15 +73,23 @@ function Contact() {
                     <Cross className="fill-black" onClick={() => setMenuOpen(false)}/>
                 </button>
                 <div className="flex h-full border justify-center items-center">
-                <ul className='flex flex-col text-6xl font-sans tracking-wider gap-20 text-center align-center text-black'>
+                <ul className='flex flex-col items-center text-5xl font-sans tracking-wider gap-10 text-center align-center text-black'>
                     <li>
-                        <Link to="/work" className="hover:text-gray-500 hover:scale-110 duration-300">work.</Link>
+                        <Link to="/portfolio" className="hover:text-gray-500 hover:scale-110 duration-300">portfolio.</Link>
                     </li>
                     <li>
                         <Link to="/about" className="hover:text-gray-500 hover:scale-110 duration-300 ">about.</Link>
                     </li>
                     <li>
                         <Link to="/contact" className="hover:text-gray-500 hover:scale-110 duration-300">contact.</Link>
+                    </li>
+                    <li className="flex gap-6">
+                        <div className='h-8 w-8 hover:scale-110 duration-300'>
+                            <InstagramLogo className="cursor-pointer hover:fill-gray-400" onClick={() => window.open('https://www.instagram.com/che.ngi/', '_blank')}/>
+                        </div>
+                        <div className='h-8 w-8 hover:scale-110 duration-300'>
+                            <LinkedInLogo className="cursor-pointer hover:fill-gray-400" onClick={() => window.open('https://www.linkedin.com/in/che-ngi', '_blank')} />
+                        </div>
                     </li>
             </ul>
             </div>

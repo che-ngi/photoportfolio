@@ -1,5 +1,5 @@
 import Home from "./pages/Home.jsx"
-import Work from "./pages/Work.jsx"
+import Portfolio from "./pages/Portfolio.jsx"
 import About from "./pages/About.jsx"
 import Contact from "./pages/Contact.jsx"
 import Portraits from "./pages/Portraits.jsx"
@@ -14,7 +14,7 @@ function App() {
     <BrowserRouter>
         <Routes>
           <Route index element={<Home/>}/> 
-          <Route path="/work" element={<Work/>}/>
+          <Route path="/portfolio" element={<Portfolio/>}/>
           <Route path="/about" element={<About/>}/>
           <Route path="/contact" element={<Contact/>}/>
           <Route path="/portraits" element={<Portraits/>}/>
