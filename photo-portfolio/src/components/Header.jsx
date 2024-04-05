@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Header() {
     return (
     <>
-      <header className="hidden sm:inline overscroll-y-none w-72 min-w-72 h-screen p-12 content-center text-left text-gray-800">
+      <header className="hidden sm:inline overscroll-y-none w-72 min-w-72 h-screen p-12 text-left text-gray-800">
         <nav className='fixed overscroll-y-none'>
         <Link to="/">
             <h1 className='font-sans text-4xl tracking-tighter align-text-top -mt-1'>
