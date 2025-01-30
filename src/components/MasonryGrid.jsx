@@ -9,6 +9,16 @@ function getImageUrl(genre, name) {
 return new URL(`${name}`, import.meta.url).href
 }
 
+const shuffleArray = array => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+    }
+    return array;
+  }
+
 
 
 function MasonryGrid (props) {
@@ -26,17 +36,17 @@ function MasonryGrid (props) {
             <main className="p-12">
                 <h1 className="font-sans font-thin tracking-wider duration-500 text-4xl xl:text-5xl text-gray-800 text-center content-start justify-center">{props.title}</h1>
                 <div className="mt-6 image-container sm:columns-3 gap-8">
-                    {props.title == "portraits" && PORTRAITS && PORTRAITS.map((item) =>   
+                    {props.title == "portraits" && PORTRAITS && shuffleArray(PORTRAITS).map((item) =>   
                         <img key={item} className="mb-8 cursor-pointer hover:scale-105 duration-300" src={getImageUrl("portraits", item)} onClick={() => previewSelector(item)}/>
                     )}
-                    {props.title == "landscapes" && LANDSCAPES && LANDSCAPES.map((item) =>  
+                    {props.title == "landscapes" && LANDSCAPES && shuffleArray(LANDSCAPES).map((item) =>  
                         <img key={item} className="mb-8 cursor-pointer hover:scale-105 duration-300" src={getImageUrl("landscapes", item)} onClick={() => previewSelector(item)}/>
                     )}
                     
-                    {props.title == "concerts" && CONCERTS && CONCERTS.map((item) =>  
+                    {props.title == "concerts" && CONCERTS && shuffleArray(CONCERTS).map((item) =>  
                         <img key={item} className="mb-8 cursor-pointer hover:scale-105 duration-300" src={getImageUrl("concerts", item)} onClick={() => previewSelector(item)}/>
                     )}
-                    {props.title == "events" && EVENTS && EVENTS.map((item) =>  
+                    {props.title == "events" && EVENTS && shuffleArray(EVENTS).map((item) =>  
                         <img key={item} className="mb-8 cursor-pointer hover:scale-105 duration-300" src={getImageUrl("events", item)} onClick={() => previewSelector(item)}/>
                     )}
                 </div>
