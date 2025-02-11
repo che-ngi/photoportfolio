@@ -11,6 +11,7 @@ function Portraits() {
 
     const [menuOpen, setMenuOpen] = useState(false);
 
+
   return (
     <div className="App flex flex-col sm:flex-row">
       <Header/>
